@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<name>Forum Logo Center</name>
+	<id>LiamHammett:LogoCenter</id>
+	<version>1.0</version>
+	<homepage>https://liamhammett.com/</homepage>
+	<file name="$themedir/index.template.php">
+		<operation>
+			<search position="replace"><![CDATA[<img src="', $settings['header_logo_url'], '" style="margin: 4px;" alt="', $context['forum_name'], '" />';
+]]></search>
+			<add><![CDATA[<div align="center"><img src="', $settings['header_logo_url'], '" style="margin: 4px;" alt="', $context['forum_name'], '" /></div>';
+]]></add>
+		</operation>
+</file>
+</modification>
